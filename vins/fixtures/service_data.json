@@ -1,0 +1,60 @@
+{
+    "1P3EW65F4VV300946": {
+        "year": "1997",
+        "make": "Plymouth",
+        "model": "Prowler",
+        "type": "Gas V6",
+        "color": "Yellow",
+        "dimensions": {
+            "Wheelbase": "112.50",
+            "Rear Legroom": "39.50",
+            "Front Legroom": "41.20",
+            "Overall Width": "75.00",
+            "Rear Headroom": "36.00",
+            "Rear Hip Room": "54.70",
+            "Front Headroom": "38.40",
+            "Front Hip Room": "56.00",
+            "Overall Height": "66.00",
+            "Overall Length": "189.50",
+            "Rear Shoulder Room": "56.20"
+        },
+        "weight": {
+            "type": "Curb Weight",
+            "unit": "lbs",
+            "value": 5568
+        }
+    },
+    "JN8DR07XX1W514175": {
+        "year": "2001",
+        "make": "Nissan",
+        "model": "Pathfinder",
+        "type": "DOHC 24V",
+        "color": "",
+        "dimensions": {
+            "Cargo Length": "32.70",
+            "Wheelbase(in)": "106.3",
+            "Rear Legroom": "31.80",
+            "Front Legroom": "41.70",
+            "Rear Headroom": "37.50",
+            "Front Headroom": "36.80",
+            "Ground Clearance": "8.30",
+            "Track Rear": "60.80",
+            "Rear Shoulder Room": "56.40"
+        },
+        "weight": [
+            {
+                "type": "Curb Weight",
+                "unit": "lbs",
+                "value": 3985
+            }, {
+                "type": "Standard Towing",
+                "unit": "lbs",
+                "value": 5000},
+            {
+                "type": "Standard GVWR",
+                "unit": "lbs",
+                "value": 5050
+            }
+        ]
+    }
+}
