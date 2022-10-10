@@ -13,6 +13,10 @@ docker-compose build
 docker-compose up
 ```
 > Take into the consideration that you may need to run above command twice, if TCP/IP connection error will be raised. 
++ Once you were able to run the containers, run following command to initialize DB tables.
+```bash
+docker-compose run web python3 manage.py migrate
+```
 
 ## Testing
 + Run pytest
