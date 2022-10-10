@@ -24,6 +24,9 @@ docker-compose run web python3 manage.py migrate
 docker-compose run web pytest
 ```
 
+## API
++ Please refer to swagger documentation _->_ `/docs`
+
 ## Usage
 + Create new class for new service by inheriting `VinURLParser` and using metaclass `ParseFormat` or just `BaseVINURLParser`. 
 ```python3
