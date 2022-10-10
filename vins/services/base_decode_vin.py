@@ -183,3 +183,9 @@ class VinURLParser:
         return JSonToPythonConverter(
             ResponseDataGetter(url).fetch()
         ).convert()
+
+
+class BaseVINURLParser(VinURLParser, metaclass=ParseFormat):
+    url: str = ""
+    formats: Dict[str, str] = {}
+

@@ -25,18 +25,18 @@ docker-compose run web pytest
 ```
 
 ## Usage
-+ Create new class for new service by inheriting `VinURLParser` and using metaclass `ParseFormat`
++ Create new class for new service by inheriting `VinURLParser` and using metaclass `ParseFormat` or just `BaseVINURLParser`. 
 ```python3
-from vins.services.base_decode_vin import VinURLParser, ParseFormat
+from vins.services.base_decode_vin import BaseVINURLParser
 
 
-class NewServiceParser(VinURLParser, metaclass=ParseFormat):
+class NewServiceParser(BaseVINURLParser):
     ...
 ```
 
 + Now you should specify url and format you need
 ```python3
-class NewServiceParser(VinURLParser, metaclass=ParseFormat):
+class NewServiceParser(BaseVINURLParser):
     url = "https://service.com/"
     formats = {"key": "find.value/0/type"}
 ```

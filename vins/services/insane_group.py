@@ -1,8 +1,8 @@
 from core.settings import INSANE_GROUP_URL
-from vins.services.base_decode_vin import VinURLParser, ParseFormat
+from vins.services.base_decode_vin import BaseVINURLParser
 
 
-class InsaneGroupParseVIN(VinURLParser, metaclass=ParseFormat):
+class InsaneGroupParseVIN(BaseVINURLParser):
     """
     InsaneGroup class is an example of using VinURLParser,
     change anything as you want or create another class,
