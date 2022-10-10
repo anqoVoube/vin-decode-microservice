@@ -25,3 +25,10 @@ response_schema_dict = {
         }
     ),
 }
+
+vin_id = openapi.Parameter(
+    'id', openapi.IN_PATH,
+    description="VIN itself",
+    example="JN8DR07XX1W514175",
+    type=openapi.TYPE_STRING
+)

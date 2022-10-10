@@ -6,8 +6,13 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from vins.models import VIN
-from vins.schemas.vin import response_schema_dict
+from vins.schemas.vin import response_schema_dict, vin_id
 from vins.serializers import VINRetrieveSerializer, VINCreateSerializer
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework.decorators import api_view
+
+from drf_yasg import openapi
 
 
 class VINAPIView(APIView):
@@ -30,7 +35,7 @@ class VINAPIView(APIView):
     def get_object(self, pk: str) -> Model:
         return self.model.objects.get(id=pk)
 
-    @swagger_auto_schema(responses=response_schema_dict)
+    @swagger_auto_schema(responses=response_schema_dict, manual_parameters=[vin_id])
     def get(self, request, pk: str) -> Response:
         # If we have not any information about this VIN
         # we send request to another service and creating new instance.
