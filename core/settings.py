@@ -15,12 +15,14 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+GET_ENV = os.environ.get
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-49y2v(mr)#+7)mf(rdy&8qh-wviz*74oqs0j-ni=p(21$7k0*p'
+SECRET_KEY = GET_ENV('DJANGO_SECRET_KEY',
+                            'django-insecure-49y2v(mr)#+7)mf(rdy&8qh-wviz*74oqs0j-ni=p(21$7k0*p'
+                            )
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,9 +84,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB'),
-        'USER': os.environ.get('POSTGRES_USER'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'NAME': GET_ENV('POSTGRES_DB'),
+        'USER': GET_ENV('POSTGRES_USER'),
+        'PASSWORD': GET_ENV('POSTGRES_PASSWORD'),
         'HOST': "db",
         'PORT': 5432,
         'TEST': {
